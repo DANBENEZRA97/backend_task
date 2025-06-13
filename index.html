@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Event Management System</h1>
+
+    <section>
+        <h2> All Events</h2>
+        <button onclick="toggleEvents()">Load Events</button>
+        <ul id="eventsList"></ul>
+    </section>
+
+    <section>
+        <h2>➕ Create Event</h2>
+        <input type="text" id="eventName" placeholder="Event Name">
+        <input type="text" id="eventLocation" placeholder="Location">
+        <input type="date" id="eventStart">
+        <input type="date" id="eventEnd">
+        <input type="number" id="eventMax" placeholder="Max Registrations">
+        <button onclick="submitEvent()">Create</button>
+
+    </section>
+
+    <section>
+        <h2>✏️ Update Event</h2>
+        <input type="number" id="updateId" placeholder="Event ID">
+        <input type="text" id="updateName" placeholder="New Name">
+        <input type="text" id="updateLocation" placeholder="New Location">
+        <input type="date" id="updateStart">
+        <input type="date" id="updateEnd">
+        <input type="number" id="updateMax" placeholder="New Max Registrations">
+        <button onclick="updateEvent()">Update</button>
+    </section>
+
+    <section>
+        <h2> Delete Event</h2>
+        <input type="number" id="deleteEventId" placeholder="Event ID">
+        <button onclick="deleteEventById()">Delete</button>
+    </section>
+
+
+    <section>
+        <h2> Register User to Event</h2>
+        <input type="number" id="registerUserId" placeholder="User ID">
+        <input type="number" id="registerEventId" placeholder="Event ID">
+        <button onclick="registerUser()">Register</button>
+        <p id="registerMessage"></p>
+    </section>
+
+    <section>
+        <h2> Weather by Event ID</h2>
+        <input type="number" id="weatherEventId" placeholder="Event ID">
+        <button onclick="getWeather()">Get Weather</button>
+        <pre id="weatherResult"></pre>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
